@@ -10,230 +10,222 @@
 </head>
 
 <body class="text-left" onload="LoadApp()">
-    <div class="d-flex w-100 h-100 p-5 mx-auto flex-column">
-        <header class="masthead mb-4">
+    <div class="w-100 h-100 pt-4 pl-4 m-0 d-flex flex-column justify-content-between">
+        <header class="masthead mb-3">
             <img src="img/elena.jpg">
             <img src="img/scroll.jpg">
         </header>
-        <main role="main">
-            <div class="row">
-                <div class="col">
-                    <h1 class="">Estas son las principales <br /> categorías de mi trabajo</h1>
-                    <div class="row row-cols-3 text-center">
-                        <div class="col">
-                            <a href="#" onclick="SelectCategory(0)">
-                                <img src="img/natural.png" class="category-img">
-                            </a>
-                            <br>
-                            <p>
-                                <span class="circle"></span>
-                                <span class="category-label">Category1</span>
-                            </p>
-                        </div>
-                        <div class="col">
-                            <a href="#" onclick="SelectCategory(1)">
-                                <img src="img/natural.png" class="category-img">
-                            </a>
-                            <br>
-                            <p>
-                                <span class="circle"></span>
-                                <span class="category-label">Category2</span>
-                            </p>
-                        </div>
-                        <div class="col">
-                            <a href="#" onclick="SelectCategory(2)">
-                                <img src="img/tirada.png" class="category-img">
-                            </a>
-                            <br>
-                            <p>
-                                <span class="circle"></span>
-                                <span class="category-label">Category3</span>
-                            </p>
-                        </div>
-                        <div class="col">
-                            <a href="#" onclick="SelectCategory(3)">
-                                <img src="img/tirada.png" class="category-img">
-                            </a>
-                            <br>
-                            <p>
-                                <span class="circle"></span>
-                                <span class="category-label">Category4</span>
-                            </p>
-                        </div>
-                        <div class="col">
-                            <a href="#" onclick="SelectCategory(4)">
-                                <img src="img/natural.png" class="category-img">
-                            </a>
-                            <br>
-                            <p>
-                                <span class="circle"></span>
-                                <span class="category-label">Category5</span>
-                            </p>
-                        </div>
-                        <div class="col">
-                            <a href="#" onclick="SelectCategory(5)">
-                                <img src="img/tirada.png" class="category-img">
-                            </a>
-                            <br>
-                            <p>
-                                <span class="circle"></span>
-                                <span class="category-label">Category6</span>
-                            </p>
-                        </div>
+        <main role="main" class="flex-grow-1 d-flex flex-row">
+            <div class="col d-flex flex-column">
+                <h1 class="mb-4">Estas son las principales <br /> categorías de mi trabajo</h1>
+                <div class="flex-grow-1 d-flex row-cols-3 flex-wrap text-center">
+                    <div class="category">
+                        <a href="#" onclick="SelectCategory(0)">
+                            <img src="img/natural.png" class="category-img">
+                        </a>
+                        <p>
+                            <span class="circle"></span>
+                            <span class="category-label">Category1</span>
+                        </p>
                     </div>
-                    <hr>
-                    <div id="archivo" class="row">
-                        <div class="col-1">
-                            <p class="aside-text">Archivo</p>
-                        </div>
-                        <div class="col row row-cols-4 text-left small-p">
-                            <div class="col">
-                                <a href="#" onclick="SetCurrentSong(0)">
-                                    <p>
-                                        <span class="small-circle"></span>
-                                        <span class="song-label">------</span>
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" onclick="SetCurrentSong(1)">
-                                    <p>
-                                        <span class="small-circle"></span>
-                                        <span class="song-label">------</span>
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" onclick="SetCurrentSong(2)">
-                                    <p>
-                                        <span class="small-circle"></span>
-                                        <span class="song-label">------</span>
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" onclick="SetCurrentSong(3)">
-                                    <p>
-                                        <span class="small-circle"></span>
-                                        <span class="song-label">------</span>
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" onclick="SetCurrentSong(4)">
-                                    <p>
-                                        <span class="small-circle"></span>
-                                        <span class="song-label">------</span>
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" onclick="SetCurrentSong(5)">
-                                    <p>
-                                        <span class="small-circle"></span>
-                                        <span class="song-label">------</span>
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" onclick="SetCurrentSong(6)">
-                                    <p>
-                                        <span class="small-circle"></span>
-                                        <span class="song-label">------</span>
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" onclick="SetCurrentSong(7)">
-                                    <p>
-                                        <span class="small-circle"></span>
-                                        <span class="song-label">------</span>
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" onclick="SetCurrentSong(8)">
-                                    <p>
-                                        <span class="small-circle"></span>
-                                        <span class="song-label">------</span>
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" onclick="SetCurrentSong(9)">
-                                    <p>
-                                        <span class="small-circle"></span>
-                                        <span class="song-label">------</span>
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" onclick="SetCurrentSong(10)">
-                                    <p>
-                                        <span class="small-circle"></span>
-                                        <span class="song-label">------</span>
-                                    </p>
-                                </a>
-                            </div>
-                            <div class="col">
-                                <a href="#" onclick="SetCurrentSong(11)">
-                                    <p>
-                                        <span class="small-circle"></span>
-                                        <span class="song-label">------</span>
-                                    </p>
-                                </a>
-                            </div>
-                        </div>
+                    <div class="category">
+                        <a href="#" onclick="SelectCategory(1)">
+                            <img src="img/natural.png" class="category-img">
+                        </a>
+                        <p>
+                            <span class="circle"></span>
+                            <span class="category-label">Category2</span>
+                        </p>
+                    </div>
+                    <div class="category">
+                        <a href="#" onclick="SelectCategory(2)">
+                            <img src="img/tirada.png" class="category-img">
+                        </a>
+                        <p>
+                            <span class="circle"></span>
+                            <span class="category-label">Category3</span>
+                        </p>
+                    </div>
+                    <div class="category">
+                        <a href="#" onclick="SelectCategory(3)">
+                            <img src="img/tirada.png" class="category-img">
+                        </a>
+                        <p>
+                            <span class="circle"></span>
+                            <span class="category-label">Category4</span>
+                        </p>
+                    </div>
+                    <div class="category">
+                        <a href="#" onclick="SelectCategory(4)">
+                            <img src="img/natural.png" class="category-img">
+                        </a>
+                        <p>
+                            <span class="circle"></span>
+                            <span class="category-label">Category5</span>
+                        </p>
+                    </div>
+                    <div class="category">
+                        <a href="#" onclick="SelectCategory(5)">
+                            <img src="img/tirada.png" class="category-img">
+                        </a>
+                        <p>
+                            <span class="circle"></span>
+                            <span class="category-label">Category6</span>
+                        </p>
                     </div>
                 </div>
-                <div class="container col-3 animation-show" id="web-player">
-                    <div class="row" id="player-info">
-                        <img src="" alt="category description" id="player-img">
-                        <h5 id="player-name">Category Name</h5>
-                        <p class="small-p" id="player-description">Category description</p>
+                <hr>
+                <div id="archivo" class="d-flex">
+                    <div class="col-1">
+                        <p class="aside-text">Archivo</p>
                     </div>
-                    <div class="row" id="song-info">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-3">
-                                    <a href="#" class="btn btn-secondary circle-border" onclick="PlayAudio()">
-                                        <img id="img-button-play" src="https://img.icons8.com/carbon-copy/100/000000/play.png" />
-                                        <img id="img-button-pause" src="https://img.icons8.com/carbon-copy/100/000000/pause.png" />
-                                    </a>
-                                </div>
-                                <div class="col-3">
-                                    <a href="#" class="btn btn-secondary" onclick="PlayPreviousSong()">
-                                        <img src="https://img.icons8.com/carbon-copy/100/000000/skip-to-start.png" />
-                                    </a>
-                                </div>
-                                <div class="col-3">
-                                    <a href="#" class="btn btn-secondary" onclick="PlayNextSong()">
-                                        <img src="https://img.icons8.com/carbon-copy/100/000000/end.png" />
-                                    </a>
-                                </div>
-                                <div class="col-3">
-                                    <a href="#" class="btn btn-secondary" onclick="DownloadSong()">
-                                        <img src="https://img.icons8.com/carbon-copy/100/000000/download.png" />
-                                    </a>
-                                </div>
-                            </div>
+                    <div class="col row row-cols-4 text-left small-p">
+                        <div class="col">
+                            <a href="#" onclick="SetCurrentSong(0)">
+                                <p>
+                                    <span class="small-circle"></span>
+                                    <span class="song-label">------</span>
+                                </p>
+                            </a>
                         </div>
-                        <p class="" id="song-name">Name</p>
-                        <hr>
-                        <p class="small-p">
-                            Duracion: <span id="song-duration">1minuto 30segundos</span>
-                        </p>
-                        <p class="small-p">
-                            Fecha: <span id="song-date">20 de octubre de 2016</span>
-                        </p>
-                        <p class="small-p">
-                            Cliente: <span id="song-client">Señor Bowl</span>
-                        </p>
+                        <div class="col">
+                            <a href="#" onclick="SetCurrentSong(1)">
+                                <p>
+                                    <span class="small-circle"></span>
+                                    <span class="song-label">------</span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" onclick="SetCurrentSong(2)">
+                                <p>
+                                    <span class="small-circle"></span>
+                                    <span class="song-label">------</span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" onclick="SetCurrentSong(3)">
+                                <p>
+                                    <span class="small-circle"></span>
+                                    <span class="song-label">------</span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" onclick="SetCurrentSong(4)">
+                                <p>
+                                    <span class="small-circle"></span>
+                                    <span class="song-label">------</span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" onclick="SetCurrentSong(5)">
+                                <p>
+                                    <span class="small-circle"></span>
+                                    <span class="song-label">------</span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" onclick="SetCurrentSong(6)">
+                                <p>
+                                    <span class="small-circle"></span>
+                                    <span class="song-label">------</span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" onclick="SetCurrentSong(7)">
+                                <p>
+                                    <span class="small-circle"></span>
+                                    <span class="song-label">------</span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" onclick="SetCurrentSong(8)">
+                                <p>
+                                    <span class="small-circle"></span>
+                                    <span class="song-label">------</span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" onclick="SetCurrentSong(9)">
+                                <p>
+                                    <span class="small-circle"></span>
+                                    <span class="song-label">------</span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" onclick="SetCurrentSong(10)">
+                                <p>
+                                    <span class="small-circle"></span>
+                                    <span class="song-label">------</span>
+                                </p>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="#" onclick="SetCurrentSong(11)">
+                                <p>
+                                    <span class="small-circle"></span>
+                                    <span class="song-label">------</span>
+                                </p>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="container animation-show" id="web-player">
+                <div class="row" id="player-info">
+                    <img src="" alt="category description" id="player-img">
+                    <h5 id="player-name">Category Name</h5>
+                    <p class="small-p" id="player-description">Category description</p>
+                </div>
+                <div class="row" id="song-info">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-3">
+                                <a href="#" class="btn btn-secondary circle-border" onclick="PlayAudio()">
+                                    <img id="img-button-play" src="https://img.icons8.com/carbon-copy/100/000000/play.png" />
+                                    <img id="img-button-pause" src="https://img.icons8.com/carbon-copy/100/000000/pause.png" />
+                                </a>
+                            </div>
+                            <div class="col-3">
+                                <a href="#" class="btn btn-secondary" onclick="PlayPreviousSong()">
+                                    <img src="https://img.icons8.com/carbon-copy/100/000000/skip-to-start.png" />
+                                </a>
+                            </div>
+                            <div class="col-3">
+                                <a href="#" class="btn btn-secondary" onclick="PlayNextSong()">
+                                    <img src="https://img.icons8.com/carbon-copy/100/000000/end.png" />
+                                </a>
+                            </div>
+                            <div class="col-3">
+                                <a href="#" class="btn btn-secondary" onclick="DownloadSong()">
+                                    <img src="https://img.icons8.com/carbon-copy/100/000000/download.png" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="" id="song-name">Name</p>
+                    <hr>
+                    <p class="small-p">
+                        Duracion: <span id="song-duration">1minuto 30segundos</span>
+                    </p>
+                    <p class="small-p">
+                        Fecha: <span id="song-date">20 de octubre de 2016</span>
+                    </p>
+                    <p class="small-p">
+                        Cliente: <span id="song-client">Señor Bowl</span>
+                    </p>
+                </div>
+            </div>
         </main>
-        <footer class="mastfoot mt-5">
+        <footer class="mastfoot mt-1">
         </footer>
     </div>
     <script src="script.js"></script>

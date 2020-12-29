@@ -79,15 +79,39 @@ main .btn-lg {
 }
 
 main h1 {
-    font-size: 35pt;
-    margin-bottom: 1em;
+    font-size: 30pt;
     font-family: 'Noto Serif', serif;
     line-height: 90%;
     font-weight: bold;
 }
 
-main img {
-    max-height: 150px;
+.category{
+    display: flex;
+    flex-direction: column;
+}
+
+.category > a{
+    flex: 1 1 0;
+    display: inline-block;
+    position: relative;
+    justify-content: center;
+}
+
+.category p{
+    margin: 0;
+}
+
+.category-img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
 }
 
 #web-player h5 {
@@ -127,6 +151,9 @@ main img {
 
 #web-player {
     transition: all 2s;
+    -ms-flex:0 0 22%;
+    flex:0 0 22%;
+    max-width:22%
 }
 
 #web-player.animation-show {
@@ -141,10 +168,16 @@ main img {
 
 #player-info img {
     padding: 0px 30px;
+    width: 80%;
 }
 
 #player-info {
     padding: 10px 30px;
+    justify-content: center;
+}
+
+#player-info h5{
+    width: 100%;
 }
 
 #song-info {
