@@ -1,2 +1,2 @@
 # gen4-audioplayer
-Web player made for some friends order 
+Web player made using HTML, CSS and JS using only the boostrap framework.
