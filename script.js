@@ -71,6 +71,11 @@ function LoadCategories(jsonContent) {
 
   allCategoriesAudios = new Object();
   for (var i = 0; i < CATEGORY_LENGTH; i++) {
+    categoryImages[i].src = categoryContent[i].category_img.replace(
+      ".png",
+      "-line.png"
+    );
+    categoryImages[i].alt = categoryContent[i].category_name;
     categoryLabels[i].innerHTML = categoryContent[i].category_name;
 
     allCategoriesAudios[i] = new Object();
@@ -99,6 +104,8 @@ function SelectCategory(categoryIndex) {
 
     musicPlayer.categoryImage.src =
       categoryContent[currentCategory].category_img;
+    musicPlayer.categoryImage.alt =
+      categoryContent[currentCategory].category_name + " category";
     musicPlayer.categoryName.innerHTML =
       categoryContent[currentCategory].category_name;
     musicPlayer.categoryDescription.innerHTML =

@@ -78,8 +78,6 @@ h1 {
 .category-img {
   max-height: 100%;
   max-width: 100%;
-  width: auto;
-  height: auto;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -89,25 +87,20 @@ h1 {
 }
 
 #web-player {
-  margin-right: 15px;
-  transition: all 2s;
   max-width: 22%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  justify-content: space-between;
 }
 
 #web-player h5 {
-  margin-top: 10px;
-}
-
-#web-player > .row,
-#player-info img {
-  border-width: thin;
-  border-color: black;
-  border-style: solid;
+  margin-top: 20px;
 }
 
 #web-player > .row {
   padding: 15px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 #web-player img {
@@ -139,8 +132,12 @@ h1 {
 }
 
 #player-info img {
-  padding: 0px 30px;
-  width: 80%;
+  height: 300px;
+  object-fit: cover;
+
+  border-width: thin;
+  border-color: black;
+  border-style: solid;
 }
 
 #player-info h5 {
@@ -149,6 +146,7 @@ h1 {
 
 #song-info {
   font-style: italic;
+  border: 1px solid lightgrey;
 }
 
 #song-info img {
