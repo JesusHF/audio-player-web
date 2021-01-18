@@ -16,12 +16,12 @@
     <div
       class="w-100 h-100 pt-4 pl-4 m-0 d-flex flex-column justify-content-between"
     >
+      <h1 class="mb-4">
+        Estas son las principales <br />
+        categorías de mi trabajo
+      </h1>
       <main role="main" class="flex-grow-1 d-flex flex-row">
         <div class="col d-flex flex-column">
-          <h1 class="mb-4">
-            Estas son las principales <br />
-            categorías de mi trabajo
-          </h1>
           <div class="flex-grow-1 d-flex row-cols-3 flex-wrap text-center">
             <div class="category">
               <a href="#" onclick="SelectCategory(0)">
@@ -183,7 +183,10 @@
             </div>
           </div>
         </div>
-        <div class="container animation-show" id="web-player">
+        <div
+          class="container d-flex flex-column justify-content-center"
+          id="web-player"
+        >
           <div class="row" id="player-info">
             <img src="" alt="category description" id="player-img" />
             <h5 id="player-name">Category Name</h5>
@@ -193,11 +196,7 @@
             <div class="container">
               <div class="row">
                 <div class="col-3">
-                  <a
-                    href="#"
-                    class="btn btn-secondary circle-border"
-                    onclick="PlayAudio()"
-                  >
+                  <a href="#" class="btn" onclick="PlayAudio()">
                     <img
                       id="img-button-play"
                       src="https://img.icons8.com/carbon-copy/100/000000/play.png"
@@ -209,33 +208,21 @@
                   </a>
                 </div>
                 <div class="col-3">
-                  <a
-                    href="#"
-                    class="btn btn-secondary"
-                    onclick="PlayPreviousSong()"
-                  >
+                  <a href="#" class="btn" onclick="PlayPreviousSong()">
                     <img
                       src="https://img.icons8.com/carbon-copy/100/000000/skip-to-start.png"
                     />
                   </a>
                 </div>
                 <div class="col-3">
-                  <a
-                    href="#"
-                    class="btn btn-secondary"
-                    onclick="PlayNextSong()"
-                  >
+                  <a href="#" class="btn" onclick="PlayNextSong()">
                     <img
                       src="https://img.icons8.com/carbon-copy/100/000000/end.png"
                     />
                   </a>
                 </div>
                 <div class="col-3">
-                  <a
-                    href="#"
-                    class="btn btn-secondary"
-                    onclick="DownloadSong()"
-                  >
+                  <a href="#" class="btn" onclick="DownloadSong()">
                     <img
                       src="https://img.icons8.com/carbon-copy/100/000000/download.png"
                     />

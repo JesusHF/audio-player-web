@@ -2,6 +2,19 @@
  * Globals
  */
 
+html,
+body {
+  height: 100%;
+  background-color: #f7f4f1;
+}
+
+body {
+  display: -ms-flexbox;
+  display: flex;
+  color: #000;
+  font-size: 12pt;
+}
+
 /* Links */
 a,
 a:focus,
@@ -9,16 +22,11 @@ a:hover {
   color: #000;
 }
 
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none;
-  /* Prevent inheritance from `body` */
-  padding: 5px;
-  background-color: #0000;
-  border: none;
+h1 {
+  font-size: 30pt;
+  font-family: "Noto Serif", serif;
+  line-height: 90%;
+  font-weight: bold;
 }
 
 .circle-border {
@@ -49,41 +57,8 @@ a:hover {
 }
 
 /*
- * Base structure
+ * Main
  */
-
-html,
-body {
-  height: 100%;
-  background-color: #f7f4f1;
-}
-
-body {
-  display: -ms-flexbox;
-  display: flex;
-  color: #000;
-  font-size: 12pt;
-  /*
-    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
-    */
-}
-
-/*
- * Cover
- */
-main .btn-lg {
-  padding: 0.75rem 1.25rem;
-  font-weight: 700;
-}
-
-main h1 {
-  font-size: 30pt;
-  font-family: "Noto Serif", serif;
-  line-height: 90%;
-  font-weight: bold;
-}
-
 .category {
   display: flex;
   flex-direction: column;
@@ -113,6 +88,12 @@ main h1 {
   margin: auto;
 }
 
+#web-player {
+  margin-right: 15px;
+  transition: all 2s;
+  max-width: 22%;
+}
+
 #web-player h5 {
   margin-top: 10px;
 }
@@ -134,11 +115,6 @@ main h1 {
   max-height: 300px;
 }
 
-.small-p {
-  font-size: 9pt;
-  margin-bottom: 0;
-}
-
 #web-player p {
   width: 100%;
 }
@@ -146,13 +122,6 @@ main h1 {
 #web-player hr {
   width: 50%;
   margin: 10px auto;
-}
-
-#web-player {
-  transition: all 2s;
-  -ms-flex: 0 0 22%;
-  flex: 0 0 22%;
-  max-width: 22%;
 }
 
 #web-player.animation-show {
@@ -164,14 +133,14 @@ main h1 {
   right: -350px;
 }
 
-#player-info img {
-  padding: 0px 30px;
-  width: 80%;
-}
-
 #player-info {
   padding: 10px 30px;
   justify-content: center;
+}
+
+#player-info img {
+  padding: 0px 30px;
+  width: 80%;
 }
 
 #player-info h5 {
@@ -191,6 +160,11 @@ main h1 {
   text-align: center;
 }
 
+.small-p {
+  font-size: 9pt;
+  margin-bottom: 0;
+}
+
 /*
  * Archivo
  */
@@ -208,12 +182,8 @@ main h1 {
 }
 
 /*
- * Footer
+ * Responsive design
  */
-.mastfoot {
-  color: rgba(255, 255, 255, 0.5);
-}
-
 @media (min-width: 1500px) {
   #web-player {
     flex: 0 0 20%;
