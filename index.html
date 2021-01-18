@@ -13,12 +13,10 @@
   </head>
 
   <body class="text-left" onload="LoadApp()">
-    <div
-      class="w-100 h-100 pt-4 pl-4 m-0 d-flex flex-column justify-content-between"
-    >
+    <div class="w-100 h-100 pt-4 pl-4 m-0 flex-column-between">
       <h1 class="mb-4">
-        Estas son las principales <br />
-        categorías de mi trabajo
+        Welcome to my curated <br />
+        selection of music
       </h1>
       <main role="main" class="flex-grow-1 d-flex flex-row">
         <div class="col d-flex flex-column">
@@ -80,10 +78,18 @@
           </div>
           <hr />
           <div id="archivo" class="d-flex">
-            <div class="col-1">
+            <div class="col-1 flex-row-between">
               <p class="aside-text">Archivo</p>
+              <div class="flex-column-between">
+                <a href="#" class="sm-btn-img" onclick="PageRight()">
+                  <img src="img/icons/right.png" />
+                </a>
+                <a href="#" class="sm-btn-img" onclick="PageLeft()">
+                  <img src="img/icons/left.png" />
+                </a>
+              </div>
             </div>
-            <div class="col row row-cols-4 text-left small-p">
+            <div class="col small-p" id="archivo-grid">
               <div class="col">
                 <a href="#" onclick="SetCurrentSong(0)">
                   <p>
@@ -194,35 +200,23 @@
               <div class="row">
                 <div class="col-3">
                   <a href="#" class="btn" onclick="PlayAudio()">
-                    <img
-                      id="img-button-play"
-                      src="https://img.icons8.com/carbon-copy/100/000000/play.png"
-                    />
-                    <img
-                      id="img-button-pause"
-                      src="https://img.icons8.com/carbon-copy/100/000000/pause.png"
-                    />
+                    <img id="img-button-play" src="img/icons/play.png" />
+                    <img id="img-button-pause" src="img/icons/pause.png" />
                   </a>
                 </div>
                 <div class="col-3">
                   <a href="#" class="btn" onclick="PlayPreviousSong()">
-                    <img
-                      src="https://img.icons8.com/carbon-copy/100/000000/skip-to-start.png"
-                    />
+                    <img src="img/icons/previous.png" />
                   </a>
                 </div>
                 <div class="col-3">
                   <a href="#" class="btn" onclick="PlayNextSong()">
-                    <img
-                      src="https://img.icons8.com/carbon-copy/100/000000/end.png"
-                    />
+                    <img src="img/icons/next.png" />
                   </a>
                 </div>
                 <div class="col-3">
                   <a href="#" class="btn" onclick="DownloadSong()">
-                    <img
-                      src="https://img.icons8.com/carbon-copy/100/000000/download.png"
-                    />
+                    <img src="img/icons/download.png" />
                   </a>
                 </div>
               </div>
