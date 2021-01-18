@@ -249,22 +249,18 @@ function StopPlaying() {
 
 function PlayNextSong() {
   if (currentAudioPlayingIndex == currentCategorySongs.length - 1) {
-    SetCurrentSong(0);
-    PlayAudio();
+    SetCurrentSong(0, true);
   } else {
-    SetCurrentSong(currentAudioPlayingIndex + 1);
-    PlayAudio();
+    SetCurrentSong(currentAudioPlayingIndex + 1, true);
   }
 }
 
 function PlayPreviousSong() {
   if (musicPlayer.currentSong.currentTime < 3) {
     if (currentAudioPlayingIndex == 0) {
-      SetCurrentSong(currentCategorySongs.length - 1);
-      PlayAudio();
+      SetCurrentSong(currentCategorySongs.length - 1, true);
     } else {
-      SetCurrentSong(currentAudioPlayingIndex - 1);
-      PlayAudio();
+      SetCurrentSong(currentAudioPlayingIndex - 1, true);
     }
   } else {
     musicPlayer.currentSong.currentTime = 0;
