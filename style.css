@@ -37,12 +37,13 @@ h1 {
 
 .circle,
 .small-circle {
-  background-color: #bbb;
+  /* background-color: #bbb; */
   border-radius: 50%;
   display: inline-block;
 }
 
 .circle {
+  border: 2px solid #8400ff;
   height: 10px;
   width: 10px;
 }
@@ -51,10 +52,11 @@ h1 {
   height: 5px;
   width: 5px;
   margin-bottom: 3px;
+  border: 1px solid #8400ff;
 }
 
 .circle-selected {
-  background-color: #8f00bd;
+  background-color: #8400ff;
 }
 
 /*

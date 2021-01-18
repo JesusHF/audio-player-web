@@ -112,7 +112,7 @@ function SelectCategory(categoryIndex) {
       categoryContent[currentCategory].category_description;
     ClearSongLabels();
     SetSongLabels(currentCategorySongs);
-    SetCurrentSong(0);
+    SetCurrentSong(0, false);
   }
 
   if (currentCategory != -1) {
@@ -123,6 +123,7 @@ function SelectCategory(categoryIndex) {
 function ClearSongLabels() {
   for (var i = 0; i < SONG_LENGTH; i++) {
     songLabels[i].innerHTML = "------";
+    songCircles[i].classList.remove("circle-selected");
   }
 }
 
@@ -132,7 +133,7 @@ function SetSongLabels(songData) {
   }
 }
 
-function SetCurrentSong(songIndex) {
+function SetCurrentSong(songIndex, playSong = true) {
   if (currentAudioPlayingIndex != -1) {
     songCircles[currentAudioPlayingIndex].classList.remove("circle-selected");
   }
@@ -159,7 +160,9 @@ function SetCurrentSong(songIndex) {
   musicPlayer.songDuration.innerHTML = GetMinutesAndSeconds(
     musicPlayer.currentSong.duration
   );
-  //PlayAudio();
+  if (playSong) {
+    PlayAudio();
+  }
 }
 
 function DateToString(date) {
