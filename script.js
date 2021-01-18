@@ -20,7 +20,8 @@ var musicPlayer = {
   categoryDescription: document.getElementById("player-description"),
   songName: document.getElementById("song-name"),
   songDate: document.getElementById("song-date"),
-  songClient: document.getElementById("song-client"),
+  songArtist: document.getElementById("song-artist"),
+  songAlbum: document.getElementById("song-album"),
   songDuration: document.getElementById("song-duration"),
   imagePlay: document.getElementById("img-button-play"),
   imagePause: document.getElementById("img-button-pause"),
@@ -156,7 +157,8 @@ function SetCurrentSong(songIndex, playSong = true) {
   var currentSongData = currentCategorySongs[songIndex];
   musicPlayer.songName.innerHTML = currentSongData.song_name;
   musicPlayer.songDate.innerHTML = DateToString(currentSongData.song_date);
-  musicPlayer.songClient.innerHTML = currentSongData.song_client;
+  musicPlayer.songArtist.innerHTML = currentSongData.song_artist;
+  musicPlayer.songAlbum.innerHTML = currentSongData.song_album;
   musicPlayer.songDuration.innerHTML = GetMinutesAndSeconds(
     musicPlayer.currentSong.duration
   );
@@ -171,47 +173,47 @@ function DateToString(date) {
   if (tokens.length != 3) {
     alert("Wrong date format! It must be DD/MM/YYYY. Received: " + date);
   }
-  return tokens[0] + " de " + GetMonthName(tokens[1]) + " de " + tokens[2];
+  return GetMonthName(tokens[1]) + " " + tokens[0] + ", " + tokens[2];
 }
 
 function GetMonthName(monthNumber) {
   var monthName = "";
   switch (monthNumber) {
     case "01":
-      monthName = "Enero";
+      monthName = "January";
       break;
     case "02":
-      monthName = "Febrero";
+      monthName = "February";
       break;
     case "03":
-      monthName = "Marzo";
+      monthName = "March";
       break;
     case "04":
-      monthName = "Abril";
+      monthName = "April";
       break;
     case "05":
-      monthName = "Mayo";
+      monthName = "May";
       break;
     case "06":
-      monthName = "Junio";
+      monthName = "June";
       break;
     case "07":
-      monthName = "Julio";
+      monthName = "July";
       break;
     case "08":
-      monthName = "Agosto";
+      monthName = "August";
       break;
     case "09":
-      monthName = "Septiembre";
+      monthName = "September";
       break;
     case "10":
-      monthName = "Octubre";
+      monthName = "October";
       break;
     case "11":
-      monthName = "Noviembre";
+      monthName = "November";
       break;
     case "12":
-      monthName = "Diciembre";
+      monthName = "December";
       break;
     default:
       monthName = "Error";

@@ -3,35 +3,35 @@
     {
       "category_name": "Electronic",
       "category_img": "img/electronic.png",
-      "category_description": "Aenean fermentum leo vitae est rutrum laoreet. Nullam posuere pellentesque volutpat. Duis feugiat lacinia lorem nec eleifend. Curabitur ac egestas enim. Duis in nibh a massa scelerisque imperdiet ac eu.",
+      "category_description": "Electronic music is music that employs electronic musical instruments, digital instruments or circuitry-based music technology",
       "category_songs": [
         {
-          "song_client": "Handsome Client",
+          "song_album": "Toy Sounds Vol. 1",
           "song_artist": "Captive Portal",
           "song_name": "You can use",
           "song_path": "./songs/electronic/01_you_can_use.mp3",
-          "song_date": "20/10/2016"
+          "song_date": "14/11/2020"
         },
         {
-          "song_client": "client meh",
+          "song_album": "Toy Sounds Vol. 1",
           "song_artist": "Captive Portal",
           "song_name": "Me as",
           "song_path": "./songs/electronic/02_me_as.mp3",
-          "song_date": "05/05/2016"
+          "song_date": "14/11/2020"
         },
         {
-          "song_client": "client ok",
+          "song_album": "Toy Sounds Vol. 1",
           "song_artist": "Captive Portal",
           "song_name": "An example for",
           "song_path": "./songs/electronic/03_an_example_for.mp3",
-          "song_date": "01/02/2012"
+          "song_date": "14/11/2020"
         },
         {
-          "song_client": "client puta madre",
+          "song_album": "Toy Sounds Vol. 1",
           "song_artist": "Captive Portal",
           "song_name": "A candy addiction",
           "song_path": "./songs/electronic/04_a_candy_addiction.mp3",
-          "song_date": "01/09/2000"
+          "song_date": "14/11/2020"
         }
       ]
     },
@@ -41,7 +41,7 @@
       "category_description": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam velit nisi, fermentum in metus id, consequat congue metus. Donec purus mauris, consequat et lectus sed, ultricies tincidunt justo",
       "category_songs": [
         {
-          "song_client": "client puta madre",
+          "song_album": "client puta madre",
           "song_artist": "Captive Portal",
           "song_name": "A candy addiction",
           "song_path": "./songs/electronic/04_a_candy_addiction.mp3",
@@ -55,7 +55,7 @@
       "category_description": "Donec pretium augue in dolor consequat fringilla eu eu erat. Duis tortor nisl, hendrerit quis ligula ac, ultrices hendrerit nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
       "category_songs": [
         {
-          "song_client": "",
+          "song_album": "",
           "song_artist": "",
           "song_name": "",
           "song_path": ""
@@ -68,7 +68,7 @@
       "category_description": "Aenean enim mauris, suscipit in neque ac, dignissim faucibus enim. Sed porttitor turpis sed lorem sodales mollis. Cras sed dolor feugiat, commodo orci non, accumsan nibh. Aliquam fringilla sem vel.",
       "category_songs": [
         {
-          "song_client": "",
+          "song_album": "",
           "song_artist": "",
           "song_name": "",
           "song_path": ""
@@ -81,7 +81,7 @@
       "category_description": "Nulla tincidunt tellus id suscipit tristique. Aenean metus sem, tincidunt condimentum sagittis quis, dapibus et nisi. Nulla imperdiet turpis sed rutrum porta. Integer id lorem a sem bibendum congue non.",
       "category_songs": [
         {
-          "song_client": "Amadeus Mozart",
+          "song_album": "Amadeus Mozart",
           "song_artist": "Ketsa",
           "song_name": "Electric Sleep",
           "song_path": "./songs/motivational/ketsa_electric_sleep.mp3",
@@ -95,7 +95,7 @@
       "category_description": "Sed convallis justo quis suscipit interdum. Mauris lobortis mi sed est porttitor rhoncus. Donec id nisl porttitor, accumsan dolor eget, varius massa. Nunc auctor turpis non risus laoreet tristique. Praesent",
       "category_songs": [
         {
-          "song_client": "",
+          "song_album": "",
           "song_artist": "",
           "song_name": "",
           "song_path": ""
