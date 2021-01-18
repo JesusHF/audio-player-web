@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "ConfigCondensed";
+  src: url("fonts/ConfigCondensed-Regular.woff") format("woff"),
+    url("fonts/ConfigCondensed-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "ConfigCondensed";
+  font-style: italic;
+  src: url("fonts/ConfigCondensed-Italic.woff") format("woff"),
+    url("fonts/ConfigCondensed-Italic.ttf") format("truetype");
+}
+
 /*
  * Globals
  */
@@ -13,7 +26,8 @@ body {
   display: -ms-flexbox;
   display: flex;
   color: #000;
-  font-size: 12pt;
+  font-size: 14pt;
+  font-family: "ConfigCondensed", Fallback, sans-serif;
 }
 
 /* Links */
@@ -145,6 +159,7 @@ h1 {
 
 #player-info h5 {
   width: 100%;
+  font-weight: bold;
 }
 
 #song-info {
@@ -176,7 +191,7 @@ h1 {
 
 .small-p,
 .small-p p {
-  font-size: 9pt;
+  font-size: 12pt;
   margin-bottom: 0;
 }
 
@@ -210,7 +225,7 @@ main hr {
 }
 
 .aside-text {
-  max-width: 20px;
+  max-width: 15px;
   letter-spacing: 5px;
   word-wrap: break-word;
   text-align: center;
