@@ -1,5 +1,6 @@
 const CATEGORY_LENGTH = 6;
 const SONG_LENGTH = 12;
+const JSON_PATH = "https://jesushfdev.com/audio-player-web/library.json";
 var categoryLabels = null;
 var categoryCircles = null;
 var categoryImages = null;
@@ -11,7 +12,6 @@ var currentCategory = -1;
 var currentCategorySongs = null;
 var currentCategoryAudios = null;
 var currentAudioPlayingIndex = -1;
-const JSON_PATH = "file:///C:/repos/webplayer-gen4/library.json";
 
 var musicPlayer = {
   container: document.getElementById("web-player"),
@@ -52,18 +52,13 @@ function LoadApp() {
   musicPlayer.container.hidden = true;
   musicPlayer.imagePause.hidden = true;
 
-  //GetJSON('file:///C:/repos/webplayer-gen4/library.json', JsonCallBack);
-  JsonCallBack(jsonData);
+  GetJSON(JSON_PATH, (jsonContent) => {
+    LoadCategories(jsonContent);
+  });
 }
 
-var JsonCallBack = function (data) {
-  //let jsonContent = JSON.parse(data);
-  let jsonContent = data;
-  LoadCategories(jsonContent);
-};
-
-function LoadCategories(data) {
-  categoryContent = data.categories;
+function LoadCategories(jsonContent) {
+  categoryContent = jsonContent.categories;
   if (categoryContent.length != CATEGORY_LENGTH) {
     alert(
       "There was a problem loading categories. Loaded: " +
@@ -71,12 +66,12 @@ function LoadCategories(data) {
         ", expected: " +
         CATEGORY_LENGTH
     );
+    return;
   }
 
   allCategoriesAudios = new Object();
   for (var i = 0; i < CATEGORY_LENGTH; i++) {
     categoryLabels[i].innerHTML = categoryContent[i].category_name;
-    //alert(JSON.stringify(categoryContent));
 
     allCategoriesAudios[i] = new Object();
     var categorySongs = categoryContent[i].category_songs;
@@ -225,7 +220,6 @@ function PlayAudio() {
       musicPlayer.currentSong.play();
       musicPlayer.imagePlay.hidden = true;
       musicPlayer.imagePause.hidden = false;
-      //musicPlayerSongDuration.innerHTML = GetMinutesAndSeconds(musicPlayer.currentSong.duration);
       musicPlayer.isPlaying = true;
     } else {
       StopPlaying();
@@ -265,116 +259,3 @@ function PlayPreviousSong() {
 }
 
 function DownloadSong() {}
-
-var jsonData = {
-  categories: [
-    {
-      category_name: "Amable",
-      category_description:
-        "Aenean fermentum leo vitae est rutrum laoreet. Nullam posuere pellentesque volutpat. Duis feugiat lacinia lorem nec eleifend. Curabitur ac egestas enim. Duis in nibh a massa scelerisque imperdiet ac eu.	",
-      category_songs: [
-        {
-          song_client: "Handsome Client",
-          song_artist: "Captive Portal",
-          song_name: "You can use",
-          song_path: "./songs/toy_sounds_volume/01_you_can_use.mp3",
-          song_date: "20/10/2016",
-        },
-        {
-          song_client: "client meh",
-          song_artist: "Captive Portal",
-          song_name: "Me as",
-          song_path: "./songs/toy_sounds_volume/02_me_as.mp3",
-          song_date: "05/05/2016",
-        },
-        {
-          song_client: "client ok",
-          song_artist: "Captive Portal",
-          song_name: "An example for",
-          song_path: "./songs/toy_sounds_volume/03_an_example_for.mp3",
-          song_date: "01/02/2012",
-        },
-        {
-          song_client: "client puta madre",
-          song_artist: "Captive Portal",
-          song_name: "A candy addiction",
-          song_path: "./songs/toy_sounds_volume/04_a_candy_addiction.mp3",
-          song_date: "01/09/2000",
-        },
-      ],
-    },
-    {
-      category_name: "Natural",
-      category_description:
-        "Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam velit nisi, fermentum in metus id, consequat congue metus. Donec purus mauris, consequat et lectus sed, ultricies tincidunt justo",
-      category_songs: [
-        {
-          song_client: "Amadeus Mozart",
-          song_artist: "Ketsa",
-          song_name: "Electric Sleep",
-          song_path: "./songs/ketsa_electric_sleep.mp3",
-          song_date: "01/09/2000",
-        },
-        {
-          song_client: "client puta madre",
-          song_artist: "Captive Portal",
-          song_name: "A candy addiction",
-          song_path: "./songs/toy_sounds_volume/04_a_candy_addiction.mp3",
-          song_date: "01/09/2000",
-        },
-      ],
-    },
-    {
-      category_name: "Tirada",
-      category_description:
-        "Donec pretium augue in dolor consequat fringilla eu eu erat. Duis tortor nisl, hendrerit quis ligula ac, ultrices hendrerit nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
-      category_songs: [
-        {
-          song_client: "",
-          song_artist: "",
-          song_name: "",
-          song_path: "",
-        },
-      ],
-    },
-    {
-      category_name: "Testimonial",
-      category_description:
-        "Aenean enim mauris, suscipit in neque ac, dignissim faucibus enim. Sed porttitor turpis sed lorem sodales mollis. Cras sed dolor feugiat, commodo orci non, accumsan nibh. Aliquam fringilla sem vel.",
-      category_songs: [
-        {
-          song_client: "",
-          song_artist: "",
-          song_name: "",
-          song_path: "",
-        },
-      ],
-    },
-    {
-      category_name: "Corporativa",
-      category_description:
-        "Nulla tincidunt tellus id suscipit tristique. Aenean metus sem, tincidunt condimentum sagittis quis, dapibus et nisi. Nulla imperdiet turpis sed rutrum porta. Integer id lorem a sem bibendum congue non.",
-      category_songs: [
-        {
-          song_client: "",
-          song_artist: "",
-          song_name: "",
-          song_path: "",
-        },
-      ],
-    },
-    {
-      category_name: "Promo",
-      category_description:
-        "Sed convallis justo quis suscipit interdum. Mauris lobortis mi sed est porttitor rhoncus. Donec id nisl porttitor, accumsan dolor eget, varius massa. Nunc auctor turpis non risus laoreet tristique. Praesent",
-      category_songs: [
-        {
-          song_client: "",
-          song_artist: "",
-          song_name: "",
-          song_path: "",
-        },
-      ],
-    },
-  ],
-};
