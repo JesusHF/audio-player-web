@@ -267,3 +267,7 @@ function PlayPreviousSong() {
 }
 
 function DownloadSong() {}
+
+function PageRight() {}
+
+function PageLeft() {}

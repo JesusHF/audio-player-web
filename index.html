@@ -196,29 +196,27 @@
             <p class="small-p" id="player-description">Category description</p>
           </div>
           <div class="row" id="song-info">
-            <div class="container">
-              <div class="row">
-                <div class="col-3">
-                  <a href="#" class="btn" onclick="PlayAudio()">
-                    <img id="img-button-play" src="img/icons/play.png" />
-                    <img id="img-button-pause" src="img/icons/pause.png" />
-                  </a>
-                </div>
-                <div class="col-3">
-                  <a href="#" class="btn" onclick="PlayPreviousSong()">
-                    <img src="img/icons/previous.png" />
-                  </a>
-                </div>
-                <div class="col-3">
-                  <a href="#" class="btn" onclick="PlayNextSong()">
-                    <img src="img/icons/next.png" />
-                  </a>
-                </div>
-                <div class="col-3">
-                  <a href="#" class="btn" onclick="DownloadSong()">
-                    <img src="img/icons/download.png" />
-                  </a>
-                </div>
+            <div id="song-info-buttons" class="flex-row-between">
+              <div>
+                <a href="#" onclick="PlayAudio()">
+                  <img id="img-button-play" src="img/icons/play.png" />
+                  <img id="img-button-pause" src="img/icons/pause.png" />
+                </a>
+              </div>
+              <div>
+                <a href="#" onclick="PlayPreviousSong()">
+                  <img src="img/icons/previous.png" />
+                </a>
+              </div>
+              <div>
+                <a href="#" onclick="PlayNextSong()">
+                  <img src="img/icons/next.png" />
+                </a>
+              </div>
+              <div>
+                <a href="#" onclick="DownloadSong()">
+                  <img src="img/icons/download.png" />
+                </a>
               </div>
             </div>
             <p class="" id="song-name"></p>
