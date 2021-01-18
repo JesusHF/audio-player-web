@@ -97,7 +97,8 @@ function SelectCategory(categoryIndex) {
     currentCategorySongs = categoryContent[currentCategory].category_songs;
     currentCategoryAudios = allCategoriesAudios[currentCategory];
 
-    musicPlayer.categoryImage.src = categoryImages[currentCategory].src;
+    musicPlayer.categoryImage.src =
+      categoryContent[currentCategory].category_img;
     musicPlayer.categoryName.innerHTML =
       categoryContent[currentCategory].category_name;
     musicPlayer.categoryDescription.innerHTML =
