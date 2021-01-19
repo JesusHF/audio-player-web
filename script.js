@@ -224,7 +224,7 @@ function GetMonthName(monthNumber) {
 function GetMinutesAndSeconds(time) {
   var minutes = Math.floor(time / 60);
   var seconds = Math.floor(time - minutes * 60);
-  return minutes + " minutos " + seconds + " segundos";
+  return minutes + " minutes " + seconds + " seconds";
 }
 
 function PlayAudio() {

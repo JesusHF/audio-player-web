@@ -38,67 +38,105 @@
     {
       "category_name": "Happy",
       "category_img": "img/happy.png",
-      "category_description": "Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam velit nisi, fermentum in metus id, consequat congue metus. Donec purus mauris, consequat et lectus sed, ultricies tincidunt justo",
+      "category_description": "Songs that will or probably should make your smile grow somehow :)",
       "category_songs": [
         {
-          "song_album": "client puta madre",
-          "song_artist": "Captive Portal",
-          "song_name": "A candy addiction",
-          "song_path": "./songs/electronic/04_a_candy_addiction.mp3",
-          "song_date": "01/09/2000"
+          "song_album": "5D",
+          "song_artist": "Ketsa",
+          "song_name": "Happier Moment",
+          "song_path": "./songs/happy/Ketsa - Happier Moment.mp3",
+          "song_date": "19/01/2021"
+        },
+        {
+          "song_album": "Single",
+          "song_artist": "Vlad Gluschenko",
+          "song_name": "Mountain Stream",
+          "song_path": "./songs/happy/Vlad Gluschenko - Mountain Stream.wav",
+          "song_date": "19/01/2021"
         }
       ]
     },
     {
       "category_name": "Jazz",
       "category_img": "img/jazz.png",
-      "category_description": "Donec pretium augue in dolor consequat fringilla eu eu erat. Duis tortor nisl, hendrerit quis ligula ac, ultrices hendrerit nunc. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+      "category_description": "Jazz is characterized by swing and blue notes, complex chords, call and response vocals, polyrhythms and improvisation",
       "category_songs": [
         {
-          "song_album": "",
-          "song_artist": "",
-          "song_name": "",
-          "song_path": ""
+          "song_artist": "Till Paradiso",
+          "song_album": "Stay Tonight",
+          "song_name": "Be Part of My Universe (TP 024)",
+          "song_path": "./songs/jazz/Till Paradiso - Be Part of My Universe (TP 024).mp3",
+          "song_date": "19/01/2021"
         }
       ]
     },
     {
       "category_name": "Lo-Fi",
       "category_img": "img/lofi.png",
-      "category_description": "Aenean enim mauris, suscipit in neque ac, dignissim faucibus enim. Sed porttitor turpis sed lorem sodales mollis. Cras sed dolor feugiat, commodo orci non, accumsan nibh. Aliquam fringilla sem vel.",
+      "category_description": "Lo-fi is a music or production quality in which elements usually regarded as imperfections of a recording or performance are audible, sometimes as a deliberate aesthetic choice",
       "category_songs": [
         {
-          "song_album": "",
-          "song_artist": "",
-          "song_name": "",
-          "song_path": ""
+          "song_album": "Single",
+          "song_artist": "Alejandro Magaña (A. M.)",
+          "song_name": "Sleepy Cat",
+          "song_path": "songs/lofi/Alejandro_Magaña-Sleepy_Cat.mp3",
+          "song_date": "19/01/2021"
+        },
+        {
+          "song_album": "Single",
+          "song_artist": "Arulo",
+          "song_name": "C.B.P.D",
+          "song_path": "songs/lofi/Arulo-cbpd.mp3",
+          "song_date": "19/01/2021"
+        },
+        {
+          "song_album": "Single",
+          "song_artist": "Diego Nava",
+          "song_name": "Green Chair",
+          "song_path": "songs/lofi/Diego_Nava-Green_Chair.mp3",
+          "song_date": "19/01/2021"
+        },
+        {
+          "song_album": "Single",
+          "song_artist": "Vlad Gluschenko",
+          "song_name": "The first snow",
+          "song_path": "songs/lofi/Vlad Gluschenko - The First Snow.wav",
+          "song_date": "19/01/2021"
+        },
+        {
+          "song_album": "5D",
+          "song_artist": "Ketsa",
+          "song_name": "Here for years",
+          "song_path": "songs/lofi/Ketsa - Here for Years.mp3",
+          "song_date": "19/01/2021"
         }
       ]
     },
     {
       "category_name": "Motivational",
       "category_img": "img/motivational.png",
-      "category_description": "Nulla tincidunt tellus id suscipit tristique. Aenean metus sem, tincidunt condimentum sagittis quis, dapibus et nisi. Nulla imperdiet turpis sed rutrum porta. Integer id lorem a sem bibendum congue non.",
+      "category_description": "Motivational as in the state or condition of being motivated or having a strong reason to act or accomplish something",
       "category_songs": [
         {
-          "song_album": "Amadeus Mozart",
+          "song_album": "5D",
           "song_artist": "Ketsa",
           "song_name": "Electric Sleep",
           "song_path": "./songs/motivational/ketsa_electric_sleep.mp3",
-          "song_date": "01/09/2000"
+          "song_date": "30/12/2020"
         }
       ]
     },
     {
       "category_name": "Pop",
       "category_img": "img/pop.png",
-      "category_description": "Sed convallis justo quis suscipit interdum. Mauris lobortis mi sed est porttitor rhoncus. Donec id nisl porttitor, accumsan dolor eget, varius massa. Nunc auctor turpis non risus laoreet tristique. Praesent",
+      "category_description": "Also known as popular music. It describes all music that is popular and includes many disparate styles.",
       "category_songs": [
         {
-          "song_album": "",
-          "song_artist": "",
-          "song_name": "",
-          "song_path": ""
+          "song_artist": "selfpity",
+          "song_album": "Unhappy Thoughts",
+          "song_name": "Defence Mechanism",
+          "song_path": "./songs/pop/selfpity - Defence Mechanism.mp3",
+          "song_date": "19/01/2021"
         }
       ]
     }
