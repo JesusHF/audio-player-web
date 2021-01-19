@@ -18,6 +18,7 @@ var musicPlayer = {
   categoryImage: document.getElementById("player-img"),
   categoryName: document.getElementById("player-name"),
   categoryDescription: document.getElementById("player-description"),
+  songBar: document.getElementById("song-bar"),
   songName: document.getElementById("song-name"),
   songDate: document.getElementById("song-date"),
   songArtist: document.getElementById("song-artist"),
@@ -27,13 +28,14 @@ var musicPlayer = {
   imagePause: document.getElementById("img-button-pause"),
   currentSong: null,
   isPlaying: false,
+  updateInterval: null,
 };
 
-var GetJSON = function (url, callback) {
+var GetJSON = (url, callback) => {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", url, true);
   xhr.responseType = "json";
-  xhr.onload = function () {
+  xhr.onload = () => {
     var status = xhr.status;
     if (status === 200 || status === 0) {
       callback(xhr.response);
@@ -150,7 +152,7 @@ function SetCurrentSong(songIndex, playSong = true) {
   }
   musicPlayer.currentSong = currentCategoryAudios[songIndex];
   musicPlayer.currentSong.currentTime = 0;
-  musicPlayer.currentSong.onended = function () {
+  musicPlayer.currentSong.onended = () => {
     PlayNextSong();
   };
 
@@ -168,7 +170,7 @@ function SetCurrentSong(songIndex, playSong = true) {
 }
 
 function DateToString(date) {
-  if (date == null) return "1 de Enero de 1111";
+  if (date == null) return "January 1, 2021";
   var tokens = date.split("/");
   if (tokens.length != 3) {
     alert("Wrong date format! It must be DD/MM/YYYY. Received: " + date);
@@ -234,6 +236,7 @@ function PlayAudio() {
       musicPlayer.imagePlay.hidden = true;
       musicPlayer.imagePause.hidden = false;
       musicPlayer.isPlaying = true;
+      SetSongUpdating(true);
     } else {
       StopPlaying();
     }
@@ -245,6 +248,7 @@ function StopPlaying() {
   musicPlayer.imagePause.hidden = true;
   musicPlayer.currentSong.pause();
   musicPlayer.isPlaying = false;
+  SetSongUpdating(false);
 }
 
 function PlayNextSong() {
@@ -272,3 +276,21 @@ function DownloadSong() {}
 function PageRight() {}
 
 function PageLeft() {}
+
+function SetSongUpdating(update = true) {
+  if (update) {
+    UpdateSong();
+    musicPlayer.updateInterval = setInterval(UpdateSong, 500);
+  } else {
+    clearInterval(musicPlayer.updateInterval);
+    musicPlayer.updateInterval = null;
+    UpdateSong();
+  }
+}
+
+function UpdateSong() {
+  let songPosition = musicPlayer.currentSong.currentTime;
+  let songDuration = musicPlayer.currentSong.duration;
+  let percentage = (songDuration - songPosition) * (100 / songDuration);
+  musicPlayer.songBar.style.width = percentage + "%";
+}

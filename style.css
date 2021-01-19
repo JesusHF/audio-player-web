@@ -130,7 +130,8 @@ h1 {
 }
 
 #web-player hr {
-  width: 50%;
+  width: 100%;
+  border-color: #8400ff;
   margin: 10px auto;
 }
 
