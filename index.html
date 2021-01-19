@@ -11,7 +11,6 @@
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" type="image/png" href="img/favicon.png" />
   </head>
-
   <body class="text-left" onload="LoadApp()">
     <div class="w-100 h-100 pt-4 pl-4 m-0 flex-column-between">
       <h1 class="mb-4">
@@ -20,7 +19,7 @@
       </h1>
       <main role="main" class="flex-grow-1 d-flex flex-row">
         <div class="col d-flex flex-column">
-          <div class="flex-grow-1 d-flex row-cols-3 flex-wrap text-center">
+          <div class="flex-grow-1 d-flex row-cols-3 flex-wrap text-center mb-4">
             <div class="category">
               <a href="#" onclick="SelectCategory(0)">
                 <img src="img/pop.png" class="category-img" />
@@ -77,7 +76,7 @@
             </div>
           </div>
           <hr />
-          <div id="archivo" class="d-flex">
+          <div id="archivo" class="d-flex py-3">
             <div class="col-1 flex-row-between">
               <p class="aside-text small-p">Archivo</p>
               <div class="flex-column-between">
@@ -222,7 +221,7 @@
             <p class="" id="song-name"></p>
             <hr />
             <p class="small-p">Length: <span id="song-duration"></span></p>
-            <p class="small-p">Published: <span id="song-date"></span></p>
+            <p class="small-p">Discovered: <span id="song-date"></span></p>
             <p class="small-p">Artist: <span id="song-artist"></span></p>
             <p class="small-p">Album: <span id="song-album"></span></p>
           </div>
