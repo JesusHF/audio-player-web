@@ -76,39 +76,53 @@
       "category_description": "Lo-fi is a music or production quality in which elements usually regarded as imperfections of a recording or performance are audible, sometimes as a deliberate aesthetic choice",
       "category_songs": [
         {
-          "song_album": "Single",
-          "song_artist": "Alejandro Magaña (A. M.)",
+          "song_artist": "Alejandro Magana",
           "song_name": "Sleepy Cat",
-          "song_path": "songs/lofi/Alejandro_Magaña-Sleepy_Cat.mp3",
-          "song_date": "19/01/2021"
+          "song_album": "Single",
+          "song_date": "20/01/2021",
+          "song_path": "songs/lofi/alejandro_magana-sleepy_cat.mp3"
         },
         {
-          "song_album": "Single",
           "song_artist": "Arulo",
           "song_name": "C.B.P.D",
-          "song_path": "songs/lofi/Arulo-cbpd.mp3",
-          "song_date": "19/01/2021"
+          "song_album": "Single",
+          "song_date": "20/01/2021",
+          "song_path": "songs/lofi/arulo-cbpd.mp3"
         },
         {
-          "song_album": "Single",
           "song_artist": "Diego Nava",
           "song_name": "Green Chair",
-          "song_path": "songs/lofi/Diego_Nava-Green_Chair.mp3",
-          "song_date": "19/01/2021"
-        },
-        {
           "song_album": "Single",
-          "song_artist": "Vlad Gluschenko",
-          "song_name": "The first snow",
-          "song_path": "songs/lofi/Vlad Gluschenko - The First Snow.wav",
-          "song_date": "19/01/2021"
+          "song_date": "20/01/2021",
+          "song_path": "songs/lofi/diego_nava-green_chair.mp3"
         },
         {
-          "song_album": "5D",
+          "song_artist": "Kaleido",
+          "song_name": "In-between",
+          "song_album": "Single",
+          "song_date": "20/01/2021",
+          "song_path": "songs/lofi/in-between.mp3"
+        },
+        {
           "song_artist": "Ketsa",
-          "song_name": "Here for years",
-          "song_path": "songs/lofi/Ketsa - Here for Years.mp3",
-          "song_date": "19/01/2021"
+          "song_name": "Here For Years",
+          "song_album": "5D",
+          "song_date": "20/01/2021",
+          "song_path": "songs/lofi/ketsa-here_for_years.mp3"
+        },
+        {
+          "song_artist": "Vlad Gluschenko",
+          "song_name": "The First Snow",
+          "song_album": "Single",
+          "song_date": "20/01/2021",
+          "song_path": "songs/lofi/vlad_gluschenko-the_first_snow.wav"
+        },
+        {
+          "song_artist": "Pyrosion",
+          "song_name": "Coffee Break",
+          "song_album": "Single",
+          "song_date": "20/01/2021",
+          "song_path": "songs/electronic/pyrosion-coffee_break.mp3"
         }
       ]
     },
