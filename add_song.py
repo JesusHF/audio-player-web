@@ -178,6 +178,7 @@ if __name__ == "__main__":
         if event == "-FOLDER-":
             fnames = getAllFileNamesFrom(values["-FOLDER-"])
             window["-FILE LIST-"].update(fnames)
+            window["-ALBUM-"].update("Single")
 
         elif event == "-FILE LIST-":
             try:
@@ -194,7 +195,6 @@ if __name__ == "__main__":
 
                 window["-ARTIST-"].update(artist_name)
                 window["-SONG-"].update(song_name)
-                window["-ALBUM-"].update("Single")
                 window["-DATE-"].update(today_date)
                 # window["-PATH-"].update(new_song_path_rel)
 
