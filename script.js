@@ -253,34 +253,38 @@ function StopPlaying() {
 }
 
 function PlayNextSong() {
-  if (currentAudioPlayingIndex == currentCategorySongs.length - 1) {
-    SetCurrentSong(0, true);
-  } else {
-    SetCurrentSong(currentAudioPlayingIndex + 1, true);
+  if (musicPlayer.currentSong != null) {
+    if (currentAudioPlayingIndex == currentCategorySongs.length - 1) {
+      SetCurrentSong(0, true);
+    } else {
+      SetCurrentSong(currentAudioPlayingIndex + 1, true);
+    }
   }
 }
 
 function PlayPreviousSong() {
-  if (musicPlayer.currentSong.currentTime < 3) {
-    if (currentAudioPlayingIndex == 0) {
-      SetCurrentSong(currentCategorySongs.length - 1, true);
+  if (musicPlayer.currentSong != null) {
+    if (musicPlayer.currentSong.currentTime < 3) {
+      if (currentAudioPlayingIndex == 0) {
+        SetCurrentSong(currentCategorySongs.length - 1, true);
+      } else {
+        SetCurrentSong(currentAudioPlayingIndex - 1, true);
+      }
     } else {
-      SetCurrentSong(currentAudioPlayingIndex - 1, true);
+      musicPlayer.currentSong.currentTime = 0;
     }
-  } else {
-    musicPlayer.currentSong.currentTime = 0;
   }
 }
 
 function ChangeVolume() {
+  var level = musicPlayer.volumeLevel + 1;
+  if (level == VOLUME_LEVELS.length) {
+    level = 0;
+  }
+  musicPlayer.imageVolume.src = VOLUME_ICONS[level];
+  musicPlayer.volumeLevel = level;
   if (musicPlayer.currentSong != null) {
-    var level = musicPlayer.volumeLevel + 1;
-    if (level == VOLUME_LEVELS.length) {
-      level = 0;
-    }
-    musicPlayer.imageVolume.src = VOLUME_ICONS[level];
-    musicPlayer.currentSong.volume = VOLUME_LEVELS[level];
-    musicPlayer.volumeLevel = level;
+    musicPlayer.currentSong.volume = VOLUME_LEVELS[musicPlayer.volumeLevel];
   }
 }
 
