@@ -108,6 +108,7 @@ h1 {
   display: flex;
   flex-direction: column;
   margin-right: 15px;
+  padding: 0;
   justify-content: space-between;
 }
 
@@ -117,7 +118,6 @@ h1 {
 
 #web-player > .row {
   padding: 15px;
-  margin-bottom: 50px;
 }
 
 #web-player img {
