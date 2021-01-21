@@ -45,7 +45,7 @@
           "song_name": "Fizzy Water",
           "song_album": "Single",
           "song_date": "21/01/2021",
-          "song_path": "songs/electronic/sharp9-fizzy_water.wav"
+          "song_path": "songs/electronic/sharp9-fizzy_water.mp3"
         }
       ]
     },
@@ -66,7 +66,7 @@
           "song_name": "Mountain Stream",
           "song_album": "Single",
           "song_date": "21/01/2021",
-          "song_path": "songs/happy/vlad_gluschenko-mountain_stream.wav"
+          "song_path": "songs/happy/vlad_gluschenko-mountain_stream.mp3"
         },
         {
           "song_artist": "Ketsa",
@@ -136,7 +136,7 @@
           "song_name": "The First Snow",
           "song_album": "Single",
           "song_date": "20/01/2021",
-          "song_path": "songs/lofi/vlad_gluschenko-the_first_snow.wav"
+          "song_path": "songs/lofi/vlad_gluschenko-the_first_snow.mp3"
         },
         {
           "song_artist": "Pyrosion",
