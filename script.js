@@ -15,6 +15,8 @@ var currentCategory = -1;
 var currentCategorySongs = null;
 var currentCategoryAudios = null;
 var currentAudioPlayingIndex = -1;
+var currentCategoryPageMax = 1;
+var currentCategoryPage = 0;
 
 var musicApp = {
   categoryImages: document.querySelectorAll(".category-img"),
@@ -103,6 +105,8 @@ function SelectCategory(categoryIndex) {
     currentCategory = categoryIndex;
     currentCategorySongs = categoryContent[currentCategory].category_songs;
     currentCategoryAudios = allCategoriesAudios[currentCategory];
+    currentCategoryPageMax = Math.ceil(currentCategorySongs.length / musicApp.songLabels.length);
+    currentCategoryPage = 0;
 
     musicPlayer.categoryImage.src = categoryContent[currentCategory].category_img;
     musicPlayer.categoryImage.alt = categoryContent[currentCategory].category_name + " category";
@@ -126,12 +130,15 @@ function ClearSongLabels() {
   }
 }
 
-function SetSongLabels(songData) {
-  for (var i = 0; i < songData.length; i++) {
-    if (songData[i].song_name.length <= 22) {
-      musicApp.songLabels[i].innerHTML = songData[i].song_name;
-    } else {
-      musicApp.songLabels[i].innerHTML = songData[i].song_name.slice(0, 19) + "...";
+function SetSongLabels(songData, page = 0) {
+  let start = page * musicApp.songLabels.length;
+  for (var i = start; i < start + musicApp.songLabels.length; i++) {
+    if (i < songData.length) {
+      let name = songData[i].song_name;
+      if (songData[i].song_name.length > 22) {
+        name = name.slice(0, 19) + "...";
+      }
+      musicApp.songLabels[i - start].innerHTML = name;
     }
   }
 }
@@ -140,23 +147,26 @@ function SetCurrentSong(songIndex, playSong = true) {
   if (currentCategoryAudios[songIndex] == undefined) {
     return;
   }
+  let pageOffset = currentCategoryPage * musicApp.songLabels.length;
   if (currentAudioPlayingIndex != -1) {
-    musicApp.songCircles[currentAudioPlayingIndex].classList.remove("circle-selected");
+    musicApp.songCircles[currentAudioPlayingIndex % musicApp.songLabels.length].classList.remove(
+      "circle-selected"
+    );
   }
   musicApp.songCircles[songIndex].classList.add("circle-selected");
 
-  currentAudioPlayingIndex = songIndex;
+  currentAudioPlayingIndex = songIndex + pageOffset;
   if (musicPlayer.currentSong != null) {
     StopPlaying();
   }
-  musicPlayer.currentSong = currentCategoryAudios[songIndex];
+  musicPlayer.currentSong = currentCategoryAudios[currentAudioPlayingIndex];
   musicPlayer.currentSong.currentTime = 0;
   musicPlayer.currentSong.volume = VOLUME_LEVELS[musicPlayer.volumeLevel];
   musicPlayer.currentSong.onended = () => {
     PlayNextSong();
   };
 
-  var currentSongData = currentCategorySongs[songIndex];
+  var currentSongData = currentCategorySongs[currentAudioPlayingIndex];
   musicPlayer.songName.innerHTML = currentSongData.song_name;
   musicPlayer.songDate.innerHTML = DateToString(currentSongData.song_date);
   musicPlayer.songArtist.innerHTML = currentSongData.song_artist;
@@ -251,7 +261,8 @@ function StopPlaying() {
 
 function PlayNextSong() {
   if (musicPlayer.currentSong != null) {
-    if (currentAudioPlayingIndex == currentCategorySongs.length - 1) {
+    var minIndex = Math.min(currentCategorySongs.length - 1, musicApp.songLabels.length - 1);
+    if (currentAudioPlayingIndex == minIndex) {
       SetCurrentSong(0, true);
     } else {
       SetCurrentSong(currentAudioPlayingIndex + 1, true);
@@ -263,7 +274,8 @@ function PlayPreviousSong() {
   if (musicPlayer.currentSong != null) {
     if (musicPlayer.currentSong.currentTime < 3) {
       if (currentAudioPlayingIndex == 0) {
-        SetCurrentSong(currentCategorySongs.length - 1, true);
+        var minIndex = Math.min(currentCategorySongs.length - 1, musicApp.songLabels.length - 1);
+        SetCurrentSong(minIndex, true);
       } else {
         SetCurrentSong(currentAudioPlayingIndex - 1, true);
       }
@@ -289,9 +301,23 @@ function ResetVolumeImage() {
   musicPlayer.imageVolume.src = "img/icons/vol-100.png";
 }
 
-function PageRight() {}
+function PageRight() {
+  if (currentCategoryPage < currentCategoryPageMax - 1) {
+    currentCategoryPage += 1;
+    ClearSongLabels();
+    SetSongLabels(currentCategorySongs, currentCategoryPage);
+    SetCurrentSong(0, true);
+  }
+}
 
-function PageLeft() {}
+function PageLeft() {
+  if (currentCategoryPage > 0) {
+    currentCategoryPage -= 1;
+    ClearSongLabels();
+    SetSongLabels(currentCategorySongs, currentCategoryPage);
+    SetCurrentSong(0, true);
+  }
+}
 
 function SetSongUpdating(update = true) {
   if (update) {
