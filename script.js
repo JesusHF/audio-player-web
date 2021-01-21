@@ -133,6 +133,9 @@ function SetSongLabels(songData) {
 }
 
 function SetCurrentSong(songIndex, playSong = true) {
+  if (currentCategoryAudios[songIndex] == undefined) {
+    return;
+  }
   if (currentAudioPlayingIndex != -1) {
     musicApp.songCircles[currentAudioPlayingIndex].classList.remove("circle-selected");
   }
@@ -141,10 +144,6 @@ function SetCurrentSong(songIndex, playSong = true) {
   currentAudioPlayingIndex = songIndex;
   if (musicPlayer.currentSong != null) {
     StopPlaying();
-  }
-  if (currentCategoryAudios[songIndex] == undefined) {
-    SetCurrentSong(0);
-    return;
   }
   musicPlayer.currentSong = currentCategoryAudios[songIndex];
   musicPlayer.currentSong.currentTime = 0;
