@@ -6,32 +6,32 @@
       "category_description": "Electronic music is music that employs electronic musical instruments, digital instruments or circuitry-based music technology",
       "category_songs": [
         {
-          "song_album": "Toy Sounds Vol. 1",
           "song_artist": "Captive Portal",
-          "song_name": "You can use",
-          "song_path": "./songs/electronic/01_you_can_use.mp3",
-          "song_date": "14/11/2020"
+          "song_name": "You Can Use",
+          "song_album": "Toy Sounds Vol. 1",
+          "song_date": "14/11/2020",
+          "song_path": "songs/electronic/captive_portal-01_you_can_use.mp3"
         },
         {
-          "song_album": "Toy Sounds Vol. 1",
           "song_artist": "Captive Portal",
-          "song_name": "Me as",
-          "song_path": "./songs/electronic/02_me_as.mp3",
-          "song_date": "14/11/2020"
+          "song_name": "Me As",
+          "song_album": "Toy Sounds Vol. 1",
+          "song_date": "14/11/2020",
+          "song_path": "songs/electronic/captive_portal-02_me_as.mp3"
         },
         {
-          "song_album": "Toy Sounds Vol. 1",
           "song_artist": "Captive Portal",
-          "song_name": "An example for",
-          "song_path": "./songs/electronic/03_an_example_for.mp3",
-          "song_date": "14/11/2020"
+          "song_name": "An Example For",
+          "song_album": "Toy Sounds Vol. 1",
+          "song_date": "14/11/2020",
+          "song_path": "songs/electronic/captive_portal-03_an_example_for.mp3"
         },
         {
-          "song_album": "Toy Sounds Vol. 1",
           "song_artist": "Captive Portal",
-          "song_name": "A candy addiction",
-          "song_path": "./songs/electronic/04_a_candy_addiction.mp3",
-          "song_date": "14/11/2020"
+          "song_name": "A Candy Addiction",
+          "song_album": "Toy Sounds Vol. 1",
+          "song_date": "14/11/2020",
+          "song_path": "songs/electronic/captive_portal-04_a_candy_addiction.mp3"
         }
       ]
     },
@@ -41,18 +41,18 @@
       "category_description": "Songs that will or probably should make your smile grow somehow :)",
       "category_songs": [
         {
-          "song_album": "5D",
           "song_artist": "Ketsa",
           "song_name": "Happier Moment",
-          "song_path": "./songs/happy/Ketsa - Happier Moment.mp3",
-          "song_date": "19/01/2021"
+          "song_album": "5D",
+          "song_date": "19/01/2021",
+          "song_path": "songs/happy/ketsa-happier_moment.mp3"
         },
         {
-          "song_album": "Single",
           "song_artist": "Vlad Gluschenko",
           "song_name": "Mountain Stream",
-          "song_path": "./songs/happy/Vlad Gluschenko - Mountain Stream.wav",
-          "song_date": "19/01/2021"
+          "song_album": "Single",
+          "song_date": "21/01/2021",
+          "song_path": "songs/happy/vlad_gluschenko-mountain_stream.wav"
         }
       ]
     },
@@ -63,10 +63,10 @@
       "category_songs": [
         {
           "song_artist": "Till Paradiso",
-          "song_album": "Stay Tonight",
           "song_name": "Be Part of My Universe (TP 024)",
-          "song_path": "./songs/jazz/Till Paradiso - Be Part of My Universe (TP 024).mp3",
-          "song_date": "19/01/2021"
+          "song_album": "Stay Tonight",
+          "song_date": "19/01/2021",
+          "song_path": "songs/jazz/till_paradiso-be_part_of_my_universe_(tp_024).mp3"
         }
       ]
     },
@@ -135,7 +135,7 @@
           "song_album": "5D",
           "song_artist": "Ketsa",
           "song_name": "Electric Sleep",
-          "song_path": "./songs/motivational/ketsa_electric_sleep.mp3",
+          "song_path": "songs/motivational/ketsa-electric_sleep.mp3",
           "song_date": "30/12/2020"
         }
       ]
@@ -146,11 +146,11 @@
       "category_description": "Also known as popular music. It describes all music that is popular and includes many disparate styles.",
       "category_songs": [
         {
-          "song_artist": "selfpity",
-          "song_album": "Unhappy Thoughts",
+          "song_artist": "Selfpity",
           "song_name": "Defence Mechanism",
-          "song_path": "./songs/pop/selfpity - Defence Mechanism.mp3",
-          "song_date": "19/01/2021"
+          "song_album": "Unhappy Thoughts",
+          "song_date": "20/01/2021",
+          "song_path": "songs/pop/selfpity-defence_mechanism.mp3"
         }
       ]
     }
