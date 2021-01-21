@@ -8,17 +8,21 @@ const VOLUME_ICONS = [
   "img/icons/vol-33.png",
   "img/icons/vol-0.png",
 ];
-var categoryLabels = null;
-var categoryCircles = null;
-var categoryImages = null;
+
 var categoryContent = null;
-var songLabels = null;
-var songCircles = null;
 var allCategoriesAudios = null;
 var currentCategory = -1;
 var currentCategorySongs = null;
 var currentCategoryAudios = null;
 var currentAudioPlayingIndex = -1;
+
+var musicApp = {
+  categoryImages: document.querySelectorAll(".category-img"),
+  categoryLabels: document.querySelectorAll(".category-label"),
+  categoryCircles: document.querySelectorAll(".circle"),
+  songLabels: document.querySelectorAll(".song-label"),
+  songCircles: document.querySelectorAll(".small-circle"),
+};
 
 var musicPlayer = {
   container: document.getElementById("web-player"),
@@ -56,11 +60,6 @@ var GetJSON = (url, callback) => {
 };
 
 function LoadApp() {
-  categoryLabels = document.querySelectorAll(".category-label");
-  categoryCircles = document.querySelectorAll(".circle");
-  categoryImages = document.querySelectorAll(".category-img");
-  songLabels = document.querySelectorAll(".song-label");
-  songCircles = document.querySelectorAll(".small-circle");
   musicPlayer.container.hidden = true;
   musicPlayer.imagePause.hidden = true;
 
@@ -83,12 +82,9 @@ function LoadCategories(jsonContent) {
 
   allCategoriesAudios = new Object();
   for (var i = 0; i < CATEGORY_LENGTH; i++) {
-    categoryImages[i].src = categoryContent[i].category_img.replace(
-      ".png",
-      "-line.png"
-    );
-    categoryImages[i].alt = categoryContent[i].category_name;
-    categoryLabels[i].innerHTML = categoryContent[i].category_name;
+    musicApp.categoryImages[i].src = categoryContent[i].category_img.replace(".png", "-line.png");
+    musicApp.categoryImages[i].alt = categoryContent[i].category_name;
+    musicApp.categoryLabels[i].innerHTML = categoryContent[i].category_name;
 
     allCategoriesAudios[i] = new Object();
     var categorySongs = categoryContent[i].category_songs;
@@ -100,7 +96,7 @@ function LoadCategories(jsonContent) {
 
 function SelectCategory(categoryIndex) {
   if (currentCategory != -1) {
-    categoryCircles[currentCategory].classList.remove("circle-selected");
+    musicApp.categoryCircles[currentCategory].classList.remove("circle-selected");
   }
 
   if (currentCategory == categoryIndex) {
@@ -114,12 +110,9 @@ function SelectCategory(categoryIndex) {
     currentCategorySongs = categoryContent[currentCategory].category_songs;
     currentCategoryAudios = allCategoriesAudios[currentCategory];
 
-    musicPlayer.categoryImage.src =
-      categoryContent[currentCategory].category_img;
-    musicPlayer.categoryImage.alt =
-      categoryContent[currentCategory].category_name + " category";
-    musicPlayer.categoryName.innerHTML =
-      categoryContent[currentCategory].category_name;
+    musicPlayer.categoryImage.src = categoryContent[currentCategory].category_img;
+    musicPlayer.categoryImage.alt = categoryContent[currentCategory].category_name + " category";
+    musicPlayer.categoryName.innerHTML = categoryContent[currentCategory].category_name;
     musicPlayer.categoryDescription.innerHTML =
       categoryContent[currentCategory].category_description;
     ClearSongLabels();
@@ -128,28 +121,28 @@ function SelectCategory(categoryIndex) {
   }
 
   if (currentCategory != -1) {
-    categoryCircles[currentCategory].classList.add("circle-selected");
+    musicApp.categoryCircles[currentCategory].classList.add("circle-selected");
   }
 }
 
 function ClearSongLabels() {
   for (var i = 0; i < SONG_LENGTH; i++) {
-    songLabels[i].innerHTML = "------";
-    songCircles[i].classList.remove("circle-selected");
+    musicApp.songLabels[i].innerHTML = "------";
+    musicApp.songCircles[i].classList.remove("circle-selected");
   }
 }
 
 function SetSongLabels(songData) {
   for (var i = 0; i < songData.length; i++) {
-    songLabels[i].innerHTML = songData[i].song_name;
+    musicApp.songLabels[i].innerHTML = songData[i].song_name;
   }
 }
 
 function SetCurrentSong(songIndex, playSong = true) {
   if (currentAudioPlayingIndex != -1) {
-    songCircles[currentAudioPlayingIndex].classList.remove("circle-selected");
+    musicApp.songCircles[currentAudioPlayingIndex].classList.remove("circle-selected");
   }
-  songCircles[songIndex].classList.add("circle-selected");
+  musicApp.songCircles[songIndex].classList.add("circle-selected");
 
   currentAudioPlayingIndex = songIndex;
   if (musicPlayer.currentSong != null) {
@@ -171,9 +164,7 @@ function SetCurrentSong(songIndex, playSong = true) {
   musicPlayer.songDate.innerHTML = DateToString(currentSongData.song_date);
   musicPlayer.songArtist.innerHTML = currentSongData.song_artist;
   musicPlayer.songAlbum.innerHTML = currentSongData.song_album;
-  musicPlayer.songDuration.innerHTML = GetMinutesAndSeconds(
-    musicPlayer.currentSong.duration
-  );
+  musicPlayer.songDuration.innerHTML = GetMinutesAndSeconds(musicPlayer.currentSong.duration);
   if (playSong) {
     PlayAudio();
   }
