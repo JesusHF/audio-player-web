@@ -32,6 +32,20 @@
           "song_album": "Toy Sounds Vol. 1",
           "song_date": "14/11/2020",
           "song_path": "songs/electronic/captive_portal-04_a_candy_addiction.mp3"
+        },
+        {
+          "song_artist": "Ketsa",
+          "song_name": "Wont Stop",
+          "song_album": "Abundance",
+          "song_date": "21/01/2021",
+          "song_path": "songs/electronic/ketsa-wont_stop.mp3"
+        },
+        {
+          "song_artist": "Sharp9",
+          "song_name": "Fizzy Water",
+          "song_album": "Single",
+          "song_date": "21/01/2021",
+          "song_path": "songs/electronic/sharp9-fizzy_water.wav"
         }
       ]
     },
@@ -53,6 +67,13 @@
           "song_album": "Single",
           "song_date": "21/01/2021",
           "song_path": "songs/happy/vlad_gluschenko-mountain_stream.wav"
+        },
+        {
+          "song_artist": "Ketsa",
+          "song_name": "Back In The Old Days",
+          "song_album": "5D",
+          "song_date": "21/01/2021",
+          "song_path": "songs/happy/ketsa-back_in_the_old_days.mp3"
         }
       ]
     },
@@ -123,6 +144,13 @@
           "song_album": "Single",
           "song_date": "20/01/2021",
           "song_path": "songs/lofi/pyrosion-coffee_break.mp3"
+        },
+        {
+          "song_artist": "Ketsa",
+          "song_name": "Sun Hope",
+          "song_album": "5D",
+          "song_date": "21/01/2021",
+          "song_path": "songs/lofi/ketsa-sun_hope.mp3"
         }
       ]
     },
@@ -137,6 +165,20 @@
           "song_name": "Electric Sleep",
           "song_path": "songs/motivational/ketsa-electric_sleep.mp3",
           "song_date": "30/12/2020"
+        },
+        {
+          "song_artist": "Ketsa",
+          "song_name": "Empty Playground",
+          "song_album": "5D",
+          "song_date": "21/01/2021",
+          "song_path": "songs/motivational/ketsa-empty_playground.mp3"
+        },
+        {
+          "song_artist": "Ketsa",
+          "song_name": "Better World",
+          "song_album": "Abundance",
+          "song_date": "21/01/2021",
+          "song_path": "songs/motivational/ketsa-better_world.mp3"
         }
       ]
     },
