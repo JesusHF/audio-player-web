@@ -88,6 +88,20 @@
           "song_album": "Stay Tonight",
           "song_date": "19/01/2021",
           "song_path": "songs/jazz/till_paradiso-be_part_of_my_universe_(tp_024).mp3"
+        },
+        {
+          "song_artist": "Till Paradiso",
+          "song_name": "Frisco Bar At Midnight (tp 020)",
+          "song_album": "Stay Tonight",
+          "song_date": "21/01/2021",
+          "song_path": "songs/jazz/till_paradiso-frisco_bar_at_midnight_(tp_020).mp3"
+        },
+        {
+          "song_artist": "Till Paradiso",
+          "song_name": "Full Of Love (tp 031)",
+          "song_album": "Stay Tonight",
+          "song_date": "21/01/2021",
+          "song_path": "songs/jazz/till_paradiso-full_of_love_(tp_031).mp3"
         }
       ]
     },
@@ -151,6 +165,41 @@
           "song_album": "5D",
           "song_date": "21/01/2021",
           "song_path": "songs/lofi/ketsa-sun_hope.mp3"
+        },
+        {
+          "song_artist": "Siddhartha Corsus",
+          "song_name": "Let Go Of Time (and Time Will Let Go Of You)",
+          "song_album": "Fragments of Light",
+          "song_date": "21/01/2021",
+          "song_path": "songs/lofi/siddhartha_corsus-let_go_of_time_(and_time_will_let_go_of_you).mp3"
+        },
+        {
+          "song_artist": "Siddhartha Corsus",
+          "song_name": "One And Only (hallelujah!)",
+          "song_album": "Fragments of Light",
+          "song_date": "21/01/2021",
+          "song_path": "songs/lofi/siddhartha_corsus-one_and_only_(hallelujah!).mp3"
+        },
+        {
+          "song_artist": "Siddhartha Corsus",
+          "song_name": "Winds Of Change",
+          "song_album": "Mystic Gate: Songs for the Hidden Peak",
+          "song_date": "21/01/2021",
+          "song_path": "songs/lofi/siddhartha_corsus-winds_of_change.mp3"
+        },
+        {
+          "song_artist": "David Renda",
+          "song_name": "Dancing In The Desert",
+          "song_album": "Single",
+          "song_date": "21/01/2021",
+          "song_path": "songs/lofi/david_renda-dancing_in_the_desert.mp3"
+        },
+        {
+          "song_artist": "David Renda",
+          "song_name": "Down Days",
+          "song_album": "Single",
+          "song_date": "21/01/2021",
+          "song_path": "songs/lofi/david_renda-down_days.mp3"
         }
       ]
     },
@@ -193,6 +242,13 @@
           "song_album": "Unhappy Thoughts",
           "song_date": "20/01/2021",
           "song_path": "songs/pop/selfpity-defence_mechanism.mp3"
+        },
+        {
+          "song_artist": "Derek Clegg",
+          "song_name": "Long Gone",
+          "song_album": "Man on the Run\n",
+          "song_date": "21/01/2021",
+          "song_path": "songs/pop/derek_clegg-long_gone.mp3"
         }
       ]
     }
