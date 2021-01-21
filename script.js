@@ -128,7 +128,11 @@ function ClearSongLabels() {
 
 function SetSongLabels(songData) {
   for (var i = 0; i < songData.length; i++) {
-    musicApp.songLabels[i].innerHTML = songData[i].song_name;
+    if (songData[i].song_name.length <= 22) {
+      musicApp.songLabels[i].innerHTML = songData[i].song_name;
+    } else {
+      musicApp.songLabels[i].innerHTML = songData[i].song_name.slice(0, 19) + "...";
+    }
   }
 }
 
