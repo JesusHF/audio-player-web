@@ -60,7 +60,6 @@ var GetJSON = (url, callback) => {
 };
 
 function LoadApp() {
-  musicPlayer.container.hidden = true;
   musicPlayer.imagePause.hidden = true;
 
   GetJSON(JSON_PATH, (jsonContent) => {
@@ -99,12 +98,7 @@ function SelectCategory(categoryIndex) {
     musicApp.categoryCircles[currentCategory].classList.remove("circle-selected");
   }
 
-  if (currentCategory == categoryIndex) {
-    musicPlayer.container.hidden = !musicPlayer.container.hidden;
-    currentCategory = -1;
-    StopPlaying();
-    ClearSongLabels();
-  } else {
+  if (currentCategory != categoryIndex) {
     musicPlayer.container.hidden = false;
     currentCategory = categoryIndex;
     currentCategorySongs = categoryContent[currentCategory].category_songs;
