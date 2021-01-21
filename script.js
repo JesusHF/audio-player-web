@@ -1,6 +1,13 @@
 const CATEGORY_LENGTH = 6;
 const SONG_LENGTH = 12;
 const JSON_PATH = "https://jesushfdev.com/audio-player-web/library.json";
+const VOLUME_LEVELS = [1, 0.66, 0.33, 0];
+const VOLUME_ICONS = [
+  "img/icons/vol-100.png",
+  "img/icons/vol-66.png",
+  "img/icons/vol-33.png",
+  "img/icons/vol-0.png",
+];
 var categoryLabels = null;
 var categoryCircles = null;
 var categoryImages = null;
@@ -26,6 +33,8 @@ var musicPlayer = {
   songDuration: document.getElementById("song-duration"),
   imagePlay: document.getElementById("img-button-play"),
   imagePause: document.getElementById("img-button-pause"),
+  imageVolume: document.getElementById("img-button-volume"),
+  volumeLevel: 0,
   currentSong: null,
   isPlaying: false,
   updateInterval: null,
@@ -152,6 +161,7 @@ function SetCurrentSong(songIndex, playSong = true) {
   }
   musicPlayer.currentSong = currentCategoryAudios[songIndex];
   musicPlayer.currentSong.currentTime = 0;
+  musicPlayer.currentSong.volume = VOLUME_LEVELS[musicPlayer.volumeLevel];
   musicPlayer.currentSong.onended = () => {
     PlayNextSong();
   };
@@ -271,7 +281,21 @@ function PlayPreviousSong() {
   }
 }
 
-function DownloadSong() {}
+function ChangeVolume() {
+  if (musicPlayer.currentSong != null) {
+    var level = musicPlayer.volumeLevel + 1;
+    if (level == VOLUME_LEVELS.length) {
+      level = 0;
+    }
+    musicPlayer.imageVolume.src = VOLUME_ICONS[level];
+    musicPlayer.currentSong.volume = VOLUME_LEVELS[level];
+    musicPlayer.volumeLevel = level;
+  }
+}
+
+function ResetVolumeImage() {
+  musicPlayer.imageVolume.src = "img/icons/vol-100.png";
+}
 
 function PageRight() {}
 
