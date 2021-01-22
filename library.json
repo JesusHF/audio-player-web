@@ -6,6 +6,20 @@
       "category_description": "Electronic music is music that employs electronic musical instruments, digital instruments or circuitry-based music technology",
       "category_songs": [
         {
+          "song_artist": "Ketsa",
+          "song_name": "Wont Stop",
+          "song_album": "Abundance",
+          "song_date": "21/01/2021",
+          "song_path": "songs/electronic/ketsa-wont_stop.mp3"
+        },
+        {
+          "song_artist": "Sharp9",
+          "song_name": "Fizzy Water",
+          "song_album": "Single",
+          "song_date": "21/01/2021",
+          "song_path": "songs/electronic/sharp9-fizzy_water.mp3"
+        },
+        {
           "song_artist": "Captive Portal",
           "song_name": "You Can Use",
           "song_album": "Toy Sounds Vol. 1",
@@ -32,20 +46,6 @@
           "song_album": "Toy Sounds Vol. 1",
           "song_date": "14/11/2020",
           "song_path": "songs/electronic/captive_portal-04_a_candy_addiction.mp3"
-        },
-        {
-          "song_artist": "Ketsa",
-          "song_name": "Wont Stop",
-          "song_album": "Abundance",
-          "song_date": "21/01/2021",
-          "song_path": "songs/electronic/ketsa-wont_stop.mp3"
-        },
-        {
-          "song_artist": "Sharp9",
-          "song_name": "Fizzy Water",
-          "song_album": "Single",
-          "song_date": "21/01/2021",
-          "song_path": "songs/electronic/sharp9-fizzy_water.mp3"
         }
       ]
     },

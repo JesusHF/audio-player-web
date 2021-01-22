@@ -111,6 +111,10 @@ h1 {
   stroke-width: 2px;
 }
 
+.svg-stroke:first-child {
+  stroke-width: 4px;
+}
+
 #player-info .svg-stroke:first-child {
   visibility: hidden;
 }

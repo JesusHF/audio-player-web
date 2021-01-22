@@ -320,7 +320,8 @@ function PageLeft() {
 function SetSongUpdating(update = true) {
   if (update) {
     UpdateSong();
-    musicPlayer.updateInterval = setInterval(UpdateSong, 500);
+    musicPlayer.updateInterval = setInterval(UpdateSong, 100);
+    StartPathAnimation();
   } else {
     clearInterval(musicPlayer.updateInterval);
     musicPlayer.updateInterval = null;
@@ -333,4 +334,16 @@ function UpdateSong() {
   let songDuration = musicPlayer.currentSong.duration;
   let percentage = (songDuration - songPosition) * (100 / songDuration);
   musicPlayer.songBar.style.width = percentage + "%";
+
+  let path = document.querySelector("#player-info .svg-stroke:nth-child(2)");
+  let length = path.getTotalLength();
+  path.style.strokeDashoffset = (percentage / 100) * length;
+}
+
+function StartPathAnimation() {
+  let path = document.querySelector("#player-info .svg-stroke:nth-child(2)");
+  let length = path.getTotalLength();
+  // Set up the starting positions
+  path.style.strokeDasharray = length + " " + length;
+  path.style.strokeDashoffset = "0";
 }
