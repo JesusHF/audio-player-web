@@ -83,8 +83,7 @@ function LoadCategories(jsonContent) {
 
   allCategoriesAudios = new Object();
   for (var i = 0; i < CATEGORY_LENGTH; i++) {
-    musicApp.categoryImages[i].src = categoryContent[i].category_img.replace(".png", "-line.png");
-    musicApp.categoryImages[i].alt = categoryContent[i].category_name;
+    musicApp.categoryImages[i].innerHTML = categoryContent[i].category_img;
     musicApp.categoryLabels[i].innerHTML = categoryContent[i].category_name;
 
     allCategoriesAudios[i] = new Object();
@@ -108,8 +107,7 @@ function SelectCategory(categoryIndex) {
     currentCategoryPageMax = Math.ceil(currentCategorySongs.length / musicApp.songLabels.length);
     currentCategoryPage = 0;
 
-    musicPlayer.categoryImage.src = categoryContent[currentCategory].category_img;
-    musicPlayer.categoryImage.alt = categoryContent[currentCategory].category_name + " category";
+    musicPlayer.categoryImage.innerHTML = musicApp.categoryImages[categoryIndex].innerHTML;
     musicPlayer.categoryName.innerHTML = categoryContent[currentCategory].category_name;
     musicPlayer.categoryDescription.innerHTML =
       categoryContent[currentCategory].category_description;
@@ -298,7 +296,7 @@ function ChangeVolume() {
 }
 
 function ResetVolumeImage() {
-  musicPlayer.imageVolume.src = "img/icons/vol-100.png";
+  musicPlayer.imageVolume.src = VOLUME_ICONS[0];
 }
 
 function PageRight() {
