@@ -9,12 +9,13 @@
     <link rel="icon" type="image/png" href="img/favicon.png" />
   </head>
   <body class="text-left" onload="LoadApp()">
-    <div class="w-100 h-100 pl-4 m-0 d-flex flex-row">
+    <div id="main-columns" class="w-100 h-100 m-0">
       <main role="main" class="pt-4 col d-flex flex-column">
         <h1 class="mb-4">
           Welcome to my curated <br />
           selection of music
         </h1>
+        <p id="reproduce-desktop">Reproduce in desktop for a better experience :)</spa</p>
         <div class="flex-grow-1 d-flex flex-column">
           <div class="flex-grow-1 d-flex row-cols-3 flex-wrap text-center mb-4">
             <div class="category">
@@ -174,7 +175,7 @@
           </div>
         </div>
       </main>
-      <div id="web-player" class="container d-flex flex-column">
+      <div id="web-player" class="container">
         <div class="flex-grow-1 flex-column-around">
           <div id="player-info" class="row">
             <div id="player-img">
