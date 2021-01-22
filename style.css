@@ -14,7 +14,6 @@
 /*
  * Globals
  */
-
 html,
 body {
   width: 100%;
@@ -57,7 +56,6 @@ h1 {
 
 .circle,
 .small-circle {
-  /* background-color: #bbb; */
   border-radius: 50%;
   display: inline-block;
 }
@@ -225,9 +223,6 @@ h1 {
 /*
  * Archivo
  */
-/*
-#archivo {}
-*/
 #archivo-grid {
   display: -ms-flexbox;
   display: flex;
@@ -284,11 +279,7 @@ main hr {
 /*
  * Responsive design
  */
-/* Landscapte tablets 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-}
-*/
-
+/* Tablets */
 @media (max-width: 1024px) {
   #song-info-buttons {
     height: unset;
